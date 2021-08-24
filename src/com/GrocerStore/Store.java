@@ -18,7 +18,7 @@ public class Store {
         this.name = name;
     }
 
-    public void addProductToInventory(String name, int price, String id, String description) {
+    public void addProductToInventory() {
         System.out.println("Add a product to inventory: y/n");
         String userChoice = scanner.next();
         scanner.nextLine();
@@ -39,7 +39,7 @@ public class Store {
     }
 
     // TODO: 8/23/2021 Drink version
-    public void addDrinkToInventory(String name, int price, String id, String description, int volume, String volumeUnit) {
+    public void addDrinkToInventory() {
         System.out.println("Add a drink to inventory: y/n");
         String userChoice = scanner.next();
         scanner.nextLine();
@@ -63,11 +63,32 @@ public class Store {
         }
     }
 
-//    // TODO: 8/23/2021 fruit version.
-//    public void addToInventory() {
-//        Fruit fruit = new Fruit();
-//        inventoryList.add(fruit);
-//    }
+    // TODO: 8/23/2021 fruit version.
+    public void addFruitToInventory() {
+        boolean organic;
+        System.out.println("Add a fruit to inventory: y/n");
+        String userChoice = scanner.next();
+        scanner.nextLine();
+        if (userChoice.equals("y")) {
+            System.out.println("Name: ");
+            String fruitName = scanner.nextLine();
+            System.out.println("Price: ");
+            int fruitPrice = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Id: ");
+            String fruitId = scanner.nextLine();
+            System.out.println("Description: ");
+            String fruitDescription = scanner.nextLine();
+            System.out.println("Durability: ");
+            int fruitDurability = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Organic: y/n ");
+            String organicStatus = scanner.nextLine();
+            organic = organicStatus.equals("y");
+            Fruit fruit = new Fruit(fruitName, fruitPrice, fruitId, fruitDescription, fruitDurability, organic);
+            inventoryList.add(fruit);
+        }
+    }
 
     public void displayInventory() {
         for (Produce produce : inventoryList) {
