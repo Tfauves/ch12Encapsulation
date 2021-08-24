@@ -18,28 +18,51 @@ public class Store {
         this.name = name;
     }
 
-    public void addToInventory(String name, int price, String id, String description) {
-        System.out.println("Name: ");
-        String productName = scanner.nextLine();
-
-        System.out.println("Price: ");
-        int productPrice = scanner.nextInt();
+    public void addProductToInventory(String name, int price, String id, String description) {
+        System.out.println("Add a product to inventory: y/n");
+        String userChoice = scanner.next();
         scanner.nextLine();
-        System.out.println("Id: ");
-        String productId = scanner.nextLine();
-        System.out.println("description ");
-        String productDescription = scanner.nextLine();
-        Produce product = new Produce(productName, productPrice, productId, productDescription);
-        inventoryList.add(product);
+        if (userChoice.equals("y")) {
+            System.out.println("Name: ");
+            String productName = scanner.nextLine();
+            System.out.println("Price: ");
+            int productPrice = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Id: ");
+            String productId = scanner.nextLine();
+            System.out.println("Description ");
+            String productDescription = scanner.nextLine();
+            Produce product = new Produce(productName, productPrice, productId, productDescription);
+            inventoryList.add(product);
+        }
 
     }
-//
-//    // TODO: 8/23/2021 Drink version
-//    public void addTOInventory() {
-//        Drink drink = new Drink();
-//        inventoryList.add(drink);
-//    }
-//
+
+    // TODO: 8/23/2021 Drink version
+    public void addDrinkToInventory(String name, int price, String id, String description, int volume, String volumeUnit) {
+        System.out.println("Add a drink to inventory: y/n");
+        String userChoice = scanner.next();
+        scanner.nextLine();
+        if (userChoice.equals("y")) {
+            System.out.println("Name: ");
+            String drinkName = scanner.nextLine();
+            System.out.println("Price: ");
+            int drinkPrice = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Id: ");
+            String drinkId = scanner.nextLine();
+            System.out.println("Description: ");
+            String drinkDescription = scanner.nextLine();
+            System.out.println("Volume: ");
+            int drinkVolume = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Volume in units: ");
+            String drinkVolUnit = scanner.nextLine();
+            Drink drink = new Drink(drinkName, drinkPrice, drinkId, drinkDescription, drinkVolume, drinkVolUnit);
+            inventoryList.add(drink);
+        }
+    }
+
 //    // TODO: 8/23/2021 fruit version.
 //    public void addToInventory() {
 //        Fruit fruit = new Fruit();

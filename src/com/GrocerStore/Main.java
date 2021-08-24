@@ -16,7 +16,10 @@ public class Main {
 //        System.out.println(Drink.VOLUME_UNITS[1]);
 
         Store myStand = new Store("myStand01");
-        myStand.addToInventory("apple", 249, "#0002", "red delicious apples");
+        myStand.addProductToInventory("apple", 249, "#0002", "red delicious apples");
+        myStand.addDrinkToInventory("milk", 389, "#0049", "gallon of milk", 1, "gal");
         myStand.displayInventory();
+
     }
 }
+

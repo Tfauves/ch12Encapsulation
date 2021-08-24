@@ -18,6 +18,6 @@ public class Drink extends Produce{
     }
 
     public String toString() {
-        return super.toString() + " Volume " + volume + " | Unit: "  + " |";
+        return super.toString() + " Volume " + volume + " | Unit: "  + volumeUnit + " |";
     }
 }
