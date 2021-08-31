@@ -19,7 +19,7 @@ public class UI {
         System.out.println("5. quit");
     }
 
-    public static void start(Store store) {
+    public void start(Store store) {
         welcome(store.getName());
         optionMenu();
         int choice = getInt(1, 5, "Enter selection between 1 and 5:");
