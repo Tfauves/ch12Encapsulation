@@ -2,7 +2,7 @@ package com.GrocerStore.Produce;
 
 import java.text.NumberFormat;
 
-public class Produce {
+public abstract class Produce {
     private String name;
     private int price;
     private String id;
@@ -16,7 +16,7 @@ public class Produce {
 
     }
 
-    public String getDisplayPrice() {
+    private String getDisplayPrice() {
         return NumberFormat.getCurrencyInstance().format(price/100.0);
     }
 
@@ -25,5 +25,9 @@ public class Produce {
         String output = "| id: " + id + " | name: " + name + " | " + "description: " + description + " | price: " + getDisplayPrice() + " | ";
 
         return output;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }
