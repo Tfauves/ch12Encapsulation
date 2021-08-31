@@ -11,7 +11,7 @@ public class UI {
     }
 
     public static void optionMenu() {
-        System.out.println("WHat would you loke to do?");
+        System.out.println("What would you like to do?");
         System.out.println("1. add product to inventory");
         System.out.println("2. throw away a product");
         System.out.println("3. list all products");
