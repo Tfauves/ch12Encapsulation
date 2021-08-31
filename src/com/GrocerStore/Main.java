@@ -14,8 +14,11 @@ public class Main {
         myStand.addToInventory("apple",289, "005","granny smith apples", 8);
         myStand.addToInventory("milk",389, "0008","gallon of milk", 1, "gal");
         myStand.addToInventory("coffee",100, "01","cup of coffee", 1, "cup");
-        System.out.println(myStand.getInventory());
+        myStand.displayInventory();
         System.out.println(myStand.getBalance());
+//       System.out.println(myStand.getInventory());
+
+//
 
     }
 }
