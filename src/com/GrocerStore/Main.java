@@ -18,8 +18,6 @@ public class Main {
         System.out.println(myStand.getBalance());
 //       System.out.println(myStand.getInventory());
 
-//
-
     }
 }
 

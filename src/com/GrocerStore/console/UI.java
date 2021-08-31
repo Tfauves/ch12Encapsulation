@@ -26,7 +26,7 @@ public class UI {
     }
 
     public static int getInt(int min, int max, String prompt) {
-        int option = 0;
+        int option;
         do {
             String input = scanner.next();
             // TODO: 8/30/2021 put in a try catch block if the user enters a non integer
@@ -34,7 +34,9 @@ public class UI {
                 option = Integer.parseInt(input);
             }
             catch (Exception e) {
+                System.out.println(e);
                 System.out.println("Invalid entry please enter a positive number");
+                option = max + 1;
             }
         } while (option < min || option > max);
         return option;
