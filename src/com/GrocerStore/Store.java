@@ -4,14 +4,14 @@ import com.GrocerStore.Produce.Drink;
 import com.GrocerStore.Produce.Fruit;
 import com.GrocerStore.Produce.Produce;
 import com.GrocerStore.util.Formatter;
-
+import com.GrocerStore.console.UI;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
-    private List<Produce> inventoryList = new ArrayList<>();
+    private final List<Produce> inventoryList = new ArrayList<>();
     private int balance = 500_00;
-    private String name;
+    private final String name;
 
     public Store(String name) {
         this.name = name;

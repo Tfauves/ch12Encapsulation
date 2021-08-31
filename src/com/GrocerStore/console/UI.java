@@ -5,7 +5,7 @@ import com.GrocerStore.Store;
 import java.util.Scanner;
 
 public class UI {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
     public static void welcome(String name) {
         System.out.println("Welcome to " + name + "!");
     }
@@ -26,12 +26,18 @@ public class UI {
     }
 
     public static int getInt(int min, int max, String prompt) {
-        int option;
+        int option = 0;
         do {
             String input = scanner.next();
             // TODO: 8/30/2021 put in a try catch block if the user enters a non integer
-            option = Integer.parseInt(input);
+            try {
+                option = Integer.parseInt(input);
+            }
+            catch (Exception e) {
+                System.out.println("Invalid entry please enter a positive number");
+            }
         } while (option < min || option > max);
         return option;
     }
+
 }
