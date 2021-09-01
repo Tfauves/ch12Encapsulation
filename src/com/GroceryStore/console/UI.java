@@ -39,9 +39,16 @@ public class UI {
     public void start(Store store) {
         this.store = store;
         welcome(store.getName());
-        displayOptions("What do you want to do?", MENU);
-        int choice = getInt(1, 5, "Enter selection between 1 and 5:");
-        handleMenuSelection(choice);
+        boolean isActive = true;
+        while (isActive) {
+            displayOptions("What do you want to do?", MENU);
+            int choice = getInt(1, 5, "Enter selection between 1 and 5:");
+            if (choice == 5) {
+                isActive = false;
+//                System.exit(0);
+            }
+            handleMenuSelection(choice);
+        }
     }
 
     public static int getInt(int min, int max, String prompt) {
