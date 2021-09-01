@@ -1,4 +1,4 @@
-package com.GrocerStore.util;
+package com.GroceryStore.util;
 
 import java.text.NumberFormat;
 
