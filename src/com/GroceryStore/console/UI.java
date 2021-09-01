@@ -1,5 +1,6 @@
 package com.GroceryStore.console;
 
+import com.GroceryStore.Products.Fruit;
 import com.GroceryStore.Store;
 import com.GroceryStore.Products.Drink;
 import com.GroceryStore.Products.Product;
@@ -55,10 +56,6 @@ public class UI {
             } catch (Exception err) {
                 System.out.println("general exception");
             }
-//            finally {
-//                System.out.println("HI there");
-//            }
-            //code here
         } while (option < min || option > max);
         return option;
     }
@@ -97,7 +94,7 @@ public class UI {
         switch (choice) {
             case 1 -> newProduct = getDrinkDetails();
             // TODO: implement the following method use getDrinkDetails as reference
-//            case 2 -> newProduct = getFruitDetails();
+            case 2 -> newProduct = getFruitDetails();
             default -> {
                 System.out.println("error bad type");
                 newProduct = null;
@@ -116,6 +113,17 @@ public class UI {
                 getInt(1, Integer.MAX_VALUE, "Volume"),
                 getInt( 0, Drink.UNITS.length - 1, "Volume Unit")
         );
+    }
+
+    private static Fruit getFruitDetails() {
+        return new Fruit(
+                getString("Fruit Name", true),
+                getInt(1, Integer.MAX_VALUE, "Price?"),
+                getString("Id: ", true),
+                getString("Description: ", false),
+                getInt(1, Integer.MAX_VALUE, "Hardness: ")
+        );
+
     }
 
     private void displayProducts() {
