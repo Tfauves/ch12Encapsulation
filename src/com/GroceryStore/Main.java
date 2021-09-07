@@ -2,12 +2,14 @@ package com.GroceryStore;
 
 import com.GroceryStore.Products.Drink;
 import com.GroceryStore.Products.Fruit;
+
+import com.GroceryStore.Products.Fruit;
 import com.GroceryStore.console.UI;
 
 public class Main {
     public static void main(String[] args) {
-        Store store = new Store("My Store");
-        UI ui = new UI();
+        Store store = new Store("Cliff's store");
+        UI ui = new UI(store);
 
 //        System.out.println(store.getBalance());
         store.addToInventory("Apple", 89, "p-001", "Red Apple", 5);
@@ -16,7 +18,7 @@ public class Main {
         store.addToInventory("Orange Juice", 4_99, "d-002", "with pulp", 2 , 5);
         store.addToInventory(new Fruit("Dragon Fruit", 5_00, "p_003", "Pink dragon white", 3));
         System.out.println(store.getBalance());
-        ui.start(store);
+        ui.start();
         System.out.println(store.getInventory());
         System.out.println(store.getBalance());
     }

@@ -1,9 +1,10 @@
 package com.GroceryStore.util;
 
+
 import java.text.NumberFormat;
 
-public class Formatter {
+public abstract class Formatter {
     public static String getDisplayPrice(int price) {
-        return NumberFormat.getCurrencyInstance().format(price/100.0);
+        return NumberFormat.getCurrencyInstance().format(price / 100.0);
     }
 }

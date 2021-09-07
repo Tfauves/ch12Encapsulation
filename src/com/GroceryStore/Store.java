@@ -1,11 +1,9 @@
 package com.GroceryStore;
 
-
 import com.GroceryStore.Products.Drink;
 import com.GroceryStore.Products.Fruit;
 import com.GroceryStore.Products.Product;
 import com.GroceryStore.util.Formatter;
-
 
 import java.util.ArrayList;
 import java.util.List;
