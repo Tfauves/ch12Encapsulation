@@ -152,12 +152,4 @@ public abstract class UI {
         store.purchase(prod);
     }
 
-
-
-
-
-
-
-
-
 }

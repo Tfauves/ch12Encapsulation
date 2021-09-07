@@ -3,6 +3,7 @@ package com.GroceryStore;
 import com.GroceryStore.Products.Drink;
 import com.GroceryStore.Products.Fruit;
 import com.GroceryStore.Products.Product;
+import com.GroceryStore.konsole.UserInterface;
 import com.GroceryStore.util.Formatter;
 
 import java.util.ArrayList;
@@ -12,6 +13,11 @@ public class Store {
     private List<Product> inventory = new ArrayList<>();
     private int balance = 500_00;
     private String name;
+    public UserInterface ui;
+
+    private void setLanguage() {
+
+    }
 
     public Store(String name) {
         this.name = name;
